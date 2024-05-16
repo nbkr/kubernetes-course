@@ -5,3 +5,7 @@
    - kubernetes_control
    - hostnames
 
+- hosts: worker*
+  become: true
+  roles:
+   - disable_apparmor

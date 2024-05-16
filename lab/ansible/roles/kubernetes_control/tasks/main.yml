@@ -24,3 +24,33 @@
 - name: "Disabeling swap permanetly"
   ansible.builtin.shell: sed -i '/ swap / s/^\(.*\)$/#\1/g' /etc/fstab
 
+- name: "Copying kubelet config"
+  copy:
+    src: ../files/kubelet
+    dest: /etc/default/kubelet
+    owner: root
+    group: root
+    mode: 0644
+  notify:
+    - restart_kubelet
+
+- name: "Copying docker config"
+  copy:
+    src: ../files/daemon.json
+    dest: /etc/docker/daemon.json
+    owner: root
+    group: root
+    mode: 0644
+  notify:
+    - restart_docker
+
+- name: "Copying 10-kubeadmin.conf"
+  copy:
+    src: ../files/10-kubeadm.conf
+    dest: /usr/lib/systemd/system/kubelet.service.d/10-kubeadmn.conf
+    owner: root
+    group: root
+    mode: 0644
+  notify:
+    - restart_kubelet
+

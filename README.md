@@ -28,4 +28,5 @@ On the wokers there are two parts:
   Swap disable commands.
 * https://superuser.com/questions/846964/how-to-add-a-host-only-adapter-to-a-virtualbox-machine-via-vagrant-file-config \
   Additional network adapater for Vagrant Boxes
-
+* https://github.com/Oefenweb/ansible-apparmor/tree/master \ 
+  Copy & Pasted code for disabling app armor

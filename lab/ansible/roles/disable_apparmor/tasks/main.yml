@@ -1,0 +1,9 @@
+- name: "Stopping Apparmor"
+  ansible.builtin.service:
+    name: apparmor
+    state: stopped
+
+- name: "Disabeling Apparmor"
+  ansible.builtin.service:
+    name: apparmor
+    enabled: false
