@@ -14,5 +14,5 @@ You'll need:
 * Install flannel `kubectl apply -f https://github.com/flannel-io/flannel/releases/latest/download/kube-flannel.yml`
 * SSH to the workers using `vagrant ssh worker1` and `vagrant ssh worker2` respectivly. 
 * Run the join command that kubeadm init put out to join each node.
-> [!WARNING]
-> The kubeadm init prints two join commands. One for control-pane nodes, one for workers. Make sure you use the worker command.
+  > [!WARNING]
+  > The kubeadm init prints two join commands. One for control-pane nodes, one for workers. Make sure you use the worker command.
