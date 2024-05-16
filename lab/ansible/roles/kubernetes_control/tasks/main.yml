@@ -16,3 +16,11 @@
   with_items:
    - kubeadm
    - kubectl
+   - kubelet
+
+- name: "Disabeling swap momentarily"
+  ansible.builtin.shell: swapoff -a
+
+- name: "Disabeling swap permanetly"
+  ansible.builtin.shell: sed -i '/ swap / s/^\(.*\)$/#\1/g' /etc/fstab
+

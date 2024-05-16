@@ -1,6 +1,7 @@
-- hosts: control
+- hosts: all
   become: true
   roles:
    - docker 
    - kubernetes_control
+   - hostnames
 

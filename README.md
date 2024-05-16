@@ -24,3 +24,8 @@ On the wokers there are two parts:
 
 * https://phoenixnap.com/kb/install-kubernetes-on-ubuntu \
   Used for setting up the lab environment using Vagrant and Ansible, see [lab](lab) subfolder
+* https://github.com/SKorolchuk/kubernetes-vagrant-cluster-experiments/blob/master/disable-swap.sh \
+  Swap disable commands.
+* https://superuser.com/questions/846964/how-to-add-a-host-only-adapter-to-a-virtualbox-machine-via-vagrant-file-config \
+  Additional network adapater for Vagrant Boxes
+

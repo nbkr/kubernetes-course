@@ -1,0 +1,21 @@
+- name: "Createing control address in /etc/hosts"
+  lineinfile:
+    path: /etc/hosts
+    line: "192.168.56.10	control"
+    state: present
+    create: true
+
+- name: "Createing worker1 address in /etc/hosts"
+  lineinfile:
+    path: /etc/hosts
+    line: "192.168.56.11	worker1"
+    state: present
+    create: true
+
+- name: "Createing worker2 address in /etc/hosts"
+  lineinfile:
+    path: /etc/hosts
+    line: "192.168.56.12	worker2"
+    state: present
+    create: true
+
