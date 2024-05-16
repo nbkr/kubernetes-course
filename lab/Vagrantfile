@@ -14,7 +14,7 @@ Vagrant.configure("2") do |config|
       v.cpus = 2
     end
 
-    config.vm.provision "ansible" do |ansible|
+    control.vm.provision "ansible" do |ansible|
      ansible.playbook = "ansible/playbook.yml"
     end
   end
@@ -29,6 +29,10 @@ Vagrant.configure("2") do |config|
       v.memory = 8096
       v.cpus = 2
     end
+
+    worker1.vm.provision "ansible" do |ansible|
+     ansible.playbook = "ansible/playbook.yml"
+    end
   end
 
   config.vm.define "worker2" do |worker2|
@@ -40,6 +44,10 @@ Vagrant.configure("2") do |config|
     worker2.vm.provider "virtualbox" do |v|
       v.memory = 8096
       v.cpus = 2
+    end
+
+    worker2.vm.provision "ansible" do |ansible|
+     ansible.playbook = "ansible/playbook.yml"
     end
   end
 end
