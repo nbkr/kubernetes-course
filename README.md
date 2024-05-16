@@ -23,4 +23,4 @@ On the wokers there are two parts:
 # Sources
 
 * https://phoenixnap.com/kb/install-kubernetes-on-ubuntu \
-  Used for setting up the lab environment using Vagrant and Ansible, see 'lab' subfolder
+  Used for setting up the lab environment using Vagrant and Ansible, see [lab] subfolder
