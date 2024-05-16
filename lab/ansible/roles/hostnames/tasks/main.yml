@@ -5,6 +5,21 @@
     state: absent
     create: true
 
+- name: "Removing reference to localhost"
+  lineinfile:
+    path: /etc/hosts
+    line: "127.0.2.1 worker1 worker1"
+    state: absent
+    create: true
+
+- name: "Removing reference to localhost"
+  lineinfile:
+    path: /etc/hosts
+    line: "127.0.2.1 worker2 worker2"
+    state: absent
+    create: true
+
+
 - name: "Creating control address in /etc/hosts"
   lineinfile:
     path: /etc/hosts
