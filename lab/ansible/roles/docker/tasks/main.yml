@@ -1,0 +1,4 @@
+- name: "Installing Docker"
+  apt:
+   pkg: docker.io
+   update_cache: yes
