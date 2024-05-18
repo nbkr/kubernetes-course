@@ -24,6 +24,16 @@
 - name: "Disabeling swap permanetly"
   ansible.builtin.shell: sed -i '/ swap / s/^\(.*\)$/#\1/g' /etc/fstab
 
+- name: "Copying ip forwarding config"
+  copy:
+    src: ../files/kubernetes.conf
+    dest: /etc/sysctl.d/kubernetes.conf
+    owner: root
+    group: root
+    mode: 0644
+  notify:
+    - sysctl
+
 - name: "Copying kubelet config"
   copy:
     src: ../files/kubelet

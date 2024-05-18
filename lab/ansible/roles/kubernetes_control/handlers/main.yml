@@ -9,3 +9,6 @@
     state: restarted
     daemon_reload: true
     name: kubelet
+
+- name: sysctl
+  ansible.builtin.shell: sysctl --system
