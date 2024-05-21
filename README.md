@@ -16,7 +16,7 @@ expensive for simple VMs and so far it looks like that is all thats needed.
 Control-Pane for management, workers for actually running the containers.
 On the wokers there are two parts:
 
-* kublet: Manages the containers, starts them, stops them, etc.
+* kubelet: Manages the containers, starts them, stops them, etc.
 * kube-proxy: Network configuration, exposes containers to the network, etc.
 
 
