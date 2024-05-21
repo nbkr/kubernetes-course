@@ -20,6 +20,21 @@ On the wokers there are two parts:
 * kube-proxy: Network configuration, exposes containers to the network, etc.
 
 
+## Commands
+
+### Management
+* Reshow the command to add a worker node to the cluster:
+  ```
+  kubeadm token create --print-join-command
+  ```
+
+### Troubleshooting
+* Status of the nodes:
+  ```kubectl get nodes```
+
+* Check status if kubernetes doesn't seem to be running:
+  ```journalctl -xeu kubelet```
+
 # Sources
 
 * https://phoenixnap.com/kb/install-kubernetes-on-ubuntu \
