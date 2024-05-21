@@ -30,10 +30,14 @@ On the wokers there are two parts:
 
 ### Troubleshooting
 * Status of the nodes:
-  ```kubectl get nodes```
+  ```
+  kubectl get nodes
+  ```
 
 * Check status if kubernetes doesn't seem to be running:
-  ```journalctl -xeu kubelet```
+  ```
+  journalctl -xeu kubelet
+  ```
 
 # Sources
 
